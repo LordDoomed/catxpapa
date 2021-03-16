@@ -5,6 +5,7 @@ footer{
 	font-size: .7rem;
 	color: #CCCCCC;
 }
+a{cursor: pointer;}
 a.mainlogo{
 	background-image: url('/img/catxpapa.png');
 	background-size: contain;
@@ -24,14 +25,55 @@ a.mainlogo{
 		background-color: #f0f0f0;
 	}
 }
+.plain{
+	background:none;
+}
 #map-btn{
 	float: right;
+	&.active{
+		transition: none;
+		background-color: #fc4107!important;
+		color:#fff!important;
+		height:3.5rem;
+		border-bottom-left-radius:0;
+		border-bottom-right-radius:0;
+		
+		border-width: 0!important;
+		outline: none!important;
+		transform: none;
+	}
+}
+#lan-btn{
+	float: right;
+	margin: 0 1rem;
 }
 #sitemap{
-
-	background-color: #333!important;
-	color: #fff;
-
+	clear: both;
+	display: none;
+	transition: all .2s;
+	& .container{
+		background-color: #333;
+		
+		a{
+			border-top: 1px solid #666;
+			.plain;
+			font-size: .8rem;
+			color: #fff;
+			display: block;
+			line-height: 1.5rem;
+			padding: .2rem;
+			text-indent: 1.5rem;
+			&:hover{
+				background-color: #666;
+			}
+			&:first-child{
+				border-top: none;
+				font-weight: bold;
+				text-indent: 1em;
+				font-size: .9rem;
+			}
+		}
+	}
 }
 .banner{
 	// background-color: #ccc;
@@ -39,6 +81,31 @@ a.mainlogo{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 9rem;
+	height: 12rem;
 	margin:-2rem -2rem 1rem -2rem;
+	position:relative;
+	#banner-content{
+		
+		position: absolute;
+		top:50%; left:50%;
+		text-align: center;
+		transform: translateX(-50%) translateY(-50%);
+		h1{
+			font-size: 3rem;
+			color: #fff;
+			margin: 0;
+		}
+		h2{
+			font-size: 1.5rem;
+			color:#fff;
+			line-height: 1.5em;
+			margin: 0;
+		}
+	}
+}
+
+.imgbak{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
